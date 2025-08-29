@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 from ipywidgets import VBox, Output
 from IPython.display import display, Audio
 
-data1, sr1 = sf.read("/content/1272-128104-0009.flac")
+data1, sr1 = sf.read("/content/1272-128104-0009.flac")  # Loaded librispeech audio files
 data2, sr2 = sf.read("/content/1673-143396-0009.flac")
 
 sf.write("source1.wav", data1, sr1)
