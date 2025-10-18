@@ -19,7 +19,6 @@ The work integrates **array signal processing**, **deep learning separation (Sep
 
 ---
 
-##  Theory & Mathematical Background
 
 ##  MVDR Beamforming Formulation
 
