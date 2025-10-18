@@ -21,23 +21,27 @@ The work integrates **array signal processing**, **deep learning separation (Sep
 
 ##  Theory & Mathematical Background
 
-###  MVDR Beamformer
-The **Minimum Variance Distortionless Response (MVDR)** beamformer aims to minimize output power while maintaining unit gain in the desired direction:
+##  MVDR Beamforming Formulation
 
-\[
-\min_{\mathbf{w}} \mathbf{w}^H \mathbf{R} \mathbf{w} \quad
-\text{s.t. } \mathbf{w}^H \mathbf{d} = 1
-\]
+The MVDR (Minimum Variance Distortionless Response) beamformer minimizes the output power while preserving the desired signal direction:
+
+$$
+\min_{\mathbf{w}} \ \mathbf{w}^H \mathbf{R} \mathbf{w}
+\quad \text{s.t. } \mathbf{w}^H \mathbf{d} = 1
+$$
 
 where:  
-- \(\mathbf{R}\): covariance matrix of microphone signals  
-- \(\mathbf{d}\): steering vector toward desired direction  
+- $\mathbf{R}$ — covariance matrix of microphone signals  
+- $\mathbf{d}$ — steering vector toward the desired direction  
 
-The closed-form solution is:  
-\[
-\mathbf{w}_{\text{MVDR}} = 
-\frac{\mathbf{R}^{-1}\mathbf{d}}{\mathbf{d}^H \mathbf{R}^{-1} \mathbf{d}}
-\]
+The **closed-form solution** is given by:
+
+$$
+\mathbf{w}_{\text{MVDR}} =
+\frac{\mathbf{R}^{-1}\mathbf{d}}
+{\mathbf{d}^H \mathbf{R}^{-1}\mathbf{d}}
+$$
+
 
 This provides **distortionless filtering** towards the target and **suppresses interference/noise** from other directions.
 
