@@ -272,7 +272,3 @@ sf.write("est_source1_aligned.wav", audio1.squeeze().numpy(), TARGET_SR, subtype
 sf.write("est_source2_aligned.wav", audio2.squeeze().numpy(), TARGET_SR, subtype='PCM_16')
 
 print(" Saved aligned outputs: est_source1_aligned.wav / est_source2_aligned.wav at 16kHz")
-#-------------wer output---------------------------
-1. WER source1 vs est_source2: 16.67%
-
-2. WER source2 vs est_source1: 8.77%
